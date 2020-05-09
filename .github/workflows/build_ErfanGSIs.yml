@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://dlsvr04.asus.com.cn/pub/ASUS/ZenFone/ZS620KL/UL-Z01R-WW-90.11.162.111-user.zip
-  ROM_NAME: ZenUI
+  ROM_URL: https://qc2.androidfilehost.com/dl/dQP8CA3pWE1s8KcfO11USw/1589218689/4349826312261801194/xiaomi.eu_multi_HMNote7Pro_20.5.7_v12-10.zip
+  ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME -b
        
        - name: Zip GSI  
          run: |
